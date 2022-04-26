@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hello renders without error 1`] = `
+<div
+  className="h-screen flex justify-center"
+>
+  <div
+    className="pt-16 text-2xl text-red-500"
+  >
+    Hello 
+    World
+     from ReactJS in Rails 7!
+  </div>
+</div>
+`;
