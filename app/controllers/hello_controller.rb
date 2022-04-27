@@ -1,5 +1,5 @@
 class HelloController < ApplicationController
   def world
-    @name = params[:name]&.gsub(/\A['"]/, "")&.gsub(/['"]\Z/, "")
+    @greet = params[:greet]&.gsub(/\A['"]/, "")&.gsub(/['"]\Z/, "")
   end
 end

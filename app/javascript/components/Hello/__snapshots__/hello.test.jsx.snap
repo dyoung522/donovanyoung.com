@@ -2,14 +2,23 @@
 
 exports[`Hello renders without error 1`] = `
 <div
-  className="h-screen flex justify-center"
+  className="flex justify-center"
 >
   <div
-    className="pt-16 text-2xl text-red-500"
+    className="text-center items-center"
   >
-    Hello 
-    World
-     from ReactJS in Rails 7!
+    <p
+      className="py-16 text-2xl text-red-500"
+    >
+      Hello 
+      World
+      !
+    </p>
+    <p>
+      ReactJS v
+      18.0.0
+       Running in Rails 
+    </p>
   </div>
 </div>
 `;
