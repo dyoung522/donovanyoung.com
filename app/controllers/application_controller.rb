@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
 
   def set_page_title
     @page_title = "Donovan's Web"
-    @page_heading = "Home"
+    @page_heading = "Welcome"
   end
 end
