@@ -2,6 +2,7 @@
   "name": "app",
   "private": "true",
   "dependencies": {
+    "@headlessui/react": "^1.6.1",
     "@hotwired/stimulus": "^3.0.1",
     "@hotwired/turbo-rails": "^7.1.1",
     "autoprefixer": "^10.4.5",
@@ -16,6 +17,8 @@
     "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.scss -o ./app/assets/builds/application.css --minify",
     "dev": "bin/dev",
     "lint": "eslint app/javascript/**/*.{js,jsx}",
+    "production": "bin/rails server --environment=production",
+    "staging": "bin/rails server --environment=production",
     "test": "jest"
   },
   "devDependencies": {

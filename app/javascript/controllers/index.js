@@ -6,3 +6,6 @@ import { application } from "./application"
 
 import FooterInfoController from "./footer_info_controller.jsx"
 application.register("footer-info", FooterInfoController)
+
+import MenuController from "./menu_controller.js"
+application.register("menu", MenuController)
