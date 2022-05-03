@@ -1,7 +1,7 @@
 @tailwind base;
 @layer base {
   a {
-    @apply hover:text-blue-600 hover:dark:text-blue-400
+    @apply hover:text-blue-500
   }
 }
 
@@ -13,6 +13,14 @@
 
   .paper {
     @apply p-4 bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-slate-200 lg:rounded lg:shadow
+  }
+
+  .menu-active {
+    @apply text-blue-400 hover:text-blue-400 dark:text-blue-300 dark:hover:text-blue-300
+  }
+
+  .menu-active-fancy {
+    @apply menu-active border-b-2 border-blue-400 dark:border-blue-300 -skew-y-3
   }
 }
 

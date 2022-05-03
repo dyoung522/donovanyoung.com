@@ -1,0 +1,23 @@
+<%# Display standard navbar on small+ screens %>
+<div class="hidden sm:flex gap-5 font-rock-salt text-lg text-blue-300 dark:text-blue-400">
+  <a href=<%= welcome_path %> class=<%= action_name == "welcome" && "menu-active-fancy" %> role="menuitem">Home</a>
+  <a href=<%= about_path %> class=<%= action_name == "about" && "menu-active-fancy" %> role="menuitem">About Me</a>
+  <a href=<%= blog_path %> class=<%= action_name == "blog" && "menu-active-fancy" %> role="menuitem">Blog</a>
+</div>
+
+<%# Display hamburger menu on xs screens %>
+<div data-controller="menu" class="inline-block sm:hidden">
+  <div data-action="click->menu#toggle">
+    <button type="button" id="options-menu" aria-haspopup="true" aria-expanded="true">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <div data-menu-target="toggleable" class="hidden absolute right-1 w-56 mt-2 bg-slate-500 shadow origin-top-right rounded-md ring-1 ring-black ring-opacity-5">
+    <div class="py-1 text-blue-300 dark:text-blue-400 text-center font-rock-salt" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+      <a href=<%= welcome_path %> class="<%= action_name == 'welcome' && 'menu-active' %> block shadow p-2" role="menuitem">Home</a>
+      <a href=<%= about_path %> class="<%= action_name == 'about' && 'menu-active' %> block shadow p-2" role="menuitem">About Me</a>
+      <a href=<%= blog_path %> class="<%= action_name == 'blog' && 'menu-active' %> block p-2" role="menuitem">Blog</a>
+    </div>
+  </div>
+</div>
