@@ -34,17 +34,10 @@
       dark:text-blue-400
       font-rock-salt
       ">
-      Donovan C. Young
+      <%= link_to "Donovan C. Young", root_path %>
     </div>
   </div>
-  <div class="basis-1/3 grow text-center hidden lg:flex justify-center items-center"><%= @page_heading %></div>
-  <div class="basis-1/3 grow text-right flex justify-end items-center">
-    <div class="hidden sm:block">
-      Navbar Goes Here
-    </div>
-    <div class="sm:hidden">
-      <i class="fa-solid fa-bars"></i>
-      <%# TODO: Hamburger Menu Goes Here %>
-    </div>
-  </div>
+  <div class="basis-1/3 grow text-center hidden lg:flex justify-center items-center font-rock-salt text-2xl"><%= @page_heading %></div>
+  <div class="basis-1/3 grow text-right flex justify-end items-center content-center"><%= render "layouts/elements/navbar" %></div>
 </header>
+<div class="block text-center w-full py-1 lg:hidden text-lg font-rock-salt text-slate-300 bg-slate-500"><%= @page_heading %></div>

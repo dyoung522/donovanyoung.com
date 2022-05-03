@@ -1,0 +1,11 @@
+<nav class="hidden sm:flex gap-5 font-rock-salt text-lg text-blue-300 dark:text-blue-400">
+  <div class=<%= action_name == "welcome" && "text-blue-500" %> ><%= link_to "Home", welcome_path %></div>
+  <div class=<%= action_name == "about" && "text-blue-500" %> ><%= link_to "About Me", about_path %></div>
+  <div class=<%= action_name == "blog" && "text-blue-500" %> ><%= link_to "Blog", blog_path %></div>
+</nav>
+
+<%# Display hamburger menu on small screens %>
+<div class="sm:hidden">
+  <i class="fa-solid fa-bars"></i>
+  <%# TODO: Hamburger Menu Goes Here %>
+</div>

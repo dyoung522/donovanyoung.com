@@ -11,7 +11,7 @@ const FooterInfo = ({ railsVersion }) => {
         <i className="fa-regular fa-copyright"></i>
         {new Date().getFullYear()} {appAuthor}; <span className="italic">all rights reserved</span>
       </div>
-      <div className="flex text-xs text-slate-500 dark:text-slate-800">
+      <div className="flex text-xs text-slate-500">
         Proudly using ReactJS v{reactVersion} running on Rails v{railsVersion || "unknown"}
       </div>
     </section>
