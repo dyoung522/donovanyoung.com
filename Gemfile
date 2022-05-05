@@ -3,20 +3,19 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
-gem "rails", "~> 7.0.2", ">= 7.0.2.3"
+gem "rails", "~> 7.0.2", ">= 7.0.2.4"
 
 # Core Gems
 gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", require: false
+gem "pg", "~> 1.3"
 gem "puma", "~> 5.0"
-gem "sqlite3", "~> 1.4"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 # supporting Gems
 gem "cssbundling-rails"
 gem "jbuilder"
 gem "jsbundling-rails"
-gem "sassc-rails"
 gem "sprockets-rails"
 gem "stimulus-rails"
 gem "turbo-rails"
@@ -25,6 +24,8 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri mingw x64_mingw]
   gem "factory_bot", "~> 6.2"
+  gem "factory_bot_rails", "~> 6.2"
+  gem "faker", "~> 2.20"
   gem "pry-rails", "~> 0.3.9"
   gem "rspec-rails", "~> 5.1"
   gem "rubocop", "~> 1.28", require: false
@@ -47,5 +48,6 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem "shoulda-matchers"
   gem "webdrivers"
 end
