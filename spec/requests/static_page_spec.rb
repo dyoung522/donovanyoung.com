@@ -1,7 +1,13 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "StaticPages", type: :request do
-  describe "GET /welcome" do
-    pending "add some examples (or delete) #{__FILE__}"
+  %w[about blog welcome].each do |path|
+    describe "GET /#{path}" do
+      it "succeeds" do
+        get "/#{path}"
+
+        expect(response).to have_http_status(:ok)
+      end
+    end
   end
 end
