@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.2"
+ruby "3.1.0"
 
 gem "rails", "~> 7.0.2", ">= 7.0.2.4"
 
@@ -13,11 +13,16 @@ gem "puma", "~> 5.0"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 # supporting Gems
+gem "brakeman", "~> 5.2"
+gem "bundler-audit", "~> 0.9.0"
 gem "cssbundling-rails"
 gem "jbuilder"
 gem "jsbundling-rails"
 gem "redcarpet", "~> 3.5"
 gem "rouge-rails", "~> 0.2.1"
+gem "rubocop", "~> 1.28", require: false
+gem "rubocop-discourse", "~> 2.5"
+gem "rubocop-rails", "~> 2.14", require: false
 gem "sprockets-rails"
 gem "stimulus-rails"
 gem "turbo-rails"
@@ -30,8 +35,6 @@ group :development, :test do
   gem "faker", "~> 2.20"
   gem "pry-rails", "~> 0.3.9"
   gem "rspec-rails", "~> 5.1"
-  gem "rubocop", "~> 1.28", require: false
-  gem "rubocop-rails", "~> 2.14", require: false
   gem "rubocop-rspec", "~> 2.10", require: false
 end
 

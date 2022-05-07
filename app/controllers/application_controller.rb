@@ -1,3 +1,4 @@
+# ApplicationController
 class ApplicationController < ActionController::Base
   before_action :set_page_title
 
