@@ -16,6 +16,8 @@ gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "cssbundling-rails"
 gem "jbuilder"
 gem "jsbundling-rails"
+gem "redcarpet", "~> 3.5"
+gem "rouge-rails", "~> 0.2.1"
 gem "sprockets-rails"
 gem "stimulus-rails"
 gem "turbo-rails"
