@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "StaticPages", type: :request do
-  %w[about blog welcome].each do |path|
+  %w[blogs cv projects resume welcome].each do |path|
     describe "GET /#{path}" do
       it "succeeds" do
         get "/#{path}"

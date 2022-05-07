@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  get "/welcome", to: "static_pages#welcome", as: "welcome"
-  get "/about",   to: "static_pages#about",   as: "about"
-  get "/blog",    to: "static_pages#blog",    as: "blog"
+  get "/blogs",    to: "static_pages#blogs"
+  get "/projects", to: "static_pages#projects"
+  get "/resume",   to: "static_pages#resume"
+  get "/cv",       to: "static_pages#resume"
+  get "/welcome",  to: "static_pages#about",    as: "about"
 
-  root "static_pages#welcome"
+  get "/cv", to: redirect("/resume")
+
+  root "static_pages#about"
 end
