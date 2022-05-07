@@ -18,7 +18,6 @@
     "dev": "bin/dev",
     "lint": "eslint app/javascript/**/*.{js,jsx}",
     "production": "bin/rails server --environment=production",
-    "staging": "bin/rails server --environment=staging",
     "test": "jest"
   },
   "devDependencies": {
