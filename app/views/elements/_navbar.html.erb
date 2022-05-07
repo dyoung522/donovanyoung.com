@@ -1,8 +1,6 @@
 <%# Display standard navbar on small+ screens %>
-<div class="hidden sm:flex gap-5 font-rock-salt text-lg text-blue-300 dark:text-blue-400">
-  <a href=<%= about_path %> class=<%= action_name == "about" && "menu-active-fancy" %> role="menuitem">About Me</a>
-  <a href=<%= blogs_path %> class=<%= action_name == "blogs" && "menu-active-fancy" %> role="menuitem">Blogs</a>
-  <a href=<%= projects_path %> class=<%= action_name == "projects" && "menu-active-fancy" %> role="menuitem">Projects</a>
+<div class="hidden sm:flex gap-3 font-rock-salt text-sm md:text-lg text-blue-300 dark:text-blue-400">
+  <%= render "elements/nav_menu" %>
 </div>
 
 <%# Display hamburger menu on xs screens %>
@@ -13,11 +11,9 @@
     </button>
   </div>
 
-  <div data-menu-target="toggleable" class="hidden absolute right-1 w-56 mt-2 bg-slate-500 shadow origin-top-right rounded-md ring-1 ring-black ring-opacity-5">
-    <div class="py-1 text-blue-300 dark:text-blue-400 text-center font-rock-salt" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-      <a href=<%= about_path %> class="<%= action_name == 'welcome' && 'menu-active' %> block shadow p-2" role="menuitem">About Me</a>
-      <a href=<%= blogs_path %> class="<%= action_name == 'blogs' && 'menu-active' %> block p-2" role="menuitem">Blogs</a>
-      <a href=<%= projects_path %> class="<%= action_name == 'projects' && 'menu-active' %> block p-2" role="menuitem">Projects</a>
+  <div data-menu-target="toggleable" class="hidden absolute right-1 w-48 mt-2 bg-slate-500 shadow origin-top-right rounded-md ring-1 ring-black ring-opacity-5">
+    <div class="grid grid-cols-1 divide-y divide-slate-600 text-blue-400 text-center font-rock-salt" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+      <%= render "elements/nav_menu" %>
     </div>
   </div>
 </div>
