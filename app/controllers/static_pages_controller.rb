@@ -1,3 +1,4 @@
+# StaticPagesController
 class StaticPagesController < ApplicationController
   def about
     @page_heading = "Welcome"

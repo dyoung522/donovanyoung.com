@@ -6,6 +6,7 @@ AllCops:
     - config/**/*
     - script/**/*
     - bin/**/*
+    - vendor/**/*
     - node_modules/**/*
 
 Style/FrozenStringLiteralComment:
@@ -160,7 +161,7 @@ Lint/ShadowingOuterLocalVariable:
 
 # Check with yard instead.
 Style/Documentation:
-  Enabled: true
+  Enabled: false
 
 # This is just silly. Calling the argument `other` in all cases makes no sense.
 Naming/BinaryOperatorParameterName:
