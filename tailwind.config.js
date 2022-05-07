@@ -17,6 +17,18 @@ module.exports = {
         "circuit-board-light": "url('bg-circuit-board-light.svg')",
         "circuit-board-dark": "url('bg-circuit-board-dark.svg')",
       },
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            a: {
+              textDecoration: "none",
+              "&:hover": {
+                color: theme("color.slate.600")
+              },
+            },
+          },
+        },
+      }),
     },
   },
   plugins: [

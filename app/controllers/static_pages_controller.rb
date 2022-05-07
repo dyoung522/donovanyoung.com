@@ -1,13 +1,17 @@
 class StaticPagesController < ApplicationController
   def about
-    @page_heading = "About Me"
-  end
-
-  def blog
-    @page_heading = "Blog"
-  end
-
-  def welcome
     @page_heading = "Welcome"
+  end
+
+  def blogs
+    @page_heading = "Blogs"
+  end
+
+  def resume
+    @page_heading = "Resume"
+  end
+
+  def projects
+    @page_heading = "Projects"
   end
 end

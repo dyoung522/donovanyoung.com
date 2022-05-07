@@ -1,1 +1,10 @@
-<div class="mx-auto mt-16 text-center text-xl">Coming Soon</div>
+<section>
+  <div class="container paper sm:mt-32 sm:text-xl font-serif">
+    <%= image_tag "headshot_circle_transparant.png",
+        alt: "Photo of Donovan",
+        class: "float-left h-24 sm:h-56 mx-4 sm:mx-8 sm:-ml-20 sm:-mt-20 rotate-12 sm:shadow-2xl shadow-black dark:shadow-white rounded-full bg-white" %>
+    <%= markdown(File.read("app/views/static_pages/about_me.md")) %>
+    <p>Thanks for stopping by,</p>
+    <p class="text-right sm:text-left pl-4">&mdash;Donovan</p>
+  </div>
+</section>
