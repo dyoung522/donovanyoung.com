@@ -3,7 +3,7 @@
   bottom-0
   z-50
   w-full
-  h-16
+  max-h-20
   flex
   flex-row
   flex-auto
@@ -19,7 +19,7 @@
   dark:border-slate-900
   ">
   <div class="basis-1/3 grow text-left text-sm flex flex-row justify-start items-center">
-    <div class="pr-2">Contact Me:</div>
+    <div id="footer-left" class="pr-2">Contact Me:</div>
     <nav>
       <ul class="flex flex-row content-center text-lg">
         <li><a class="px-2" href="mailto:me@donovanyoung.com?subject=Website%20Inquiry"><i class="fa-solid fa-paper-plane"></i></a></li>
@@ -29,6 +29,16 @@
       </ul>
     </nav>
   </div>
-  <div class="basis-1/3 grow text-center text-sm hidden lg:block"></div>
-  <div class="basis-1/3 grow text-right text-sm hidden sm:flex flex-col justify-end items-end content-center" data-controller="footer-info" data-footer-info-rails-version-value="<%= Rails.version %>"></div>
+  <div id="footer-center" class="basis-1/3 grow text-center text-sm hidden lg:block"></div>
+  <div id="footer-right" class="basis-1/3 grow text-right text-sm hidden sm:flex flex-col justify-end items-end content-center">
+    <div class="text-slate-300">
+      <% if current_user %>
+        <span class="mr-1">Logged in as <%= current_user.email %></span><i class="fa-solid fa-arrow-right"></i>
+        <%= link_to "logout", logout_path, id: "logout-link", data: { "turbo-method": :delete } %>
+      <% else %>
+        <%= link_to "Member login", login_path, id: "login-link" %>
+      <% end %>
+    </div>
+    <div data-controller="footer-info" data-footer-info-rails-version-value="<%= Rails.version %>"></div>
+  </div>
 </footer>

@@ -19,7 +19,7 @@
   border-slate-500
   dark:border-slate-900
   ">
-  <div class="basis-1/3 grow text-left">
+  <div id="header-left" class="basis-1/3 grow text-left">
     <div id=logo class="
       fixed
       top-3
@@ -39,7 +39,7 @@
       <%= link_to "Donovan C. Young", root_path %>
     </div>
   </div>
-  <div class="basis-1/3 grow text-center hidden lg:flex justify-center items-center font-rock-salt text-2xl"><%= @page_heading %></div>
-  <div class="basis-1/3 grow text-right flex justify-end items-center content-center"><%= render "elements/navbar" %></div>
+  <div id="header-center" class="basis-1/3 grow text-center hidden lg:flex justify-center items-center font-rock-salt text-2xl"><%= @page_heading %></div>
+  <div id="header-right" class="basis-1/3 grow text-right flex justify-end items-center content-center"><%= render "elements/navbar" %></div>
 </header>
-<div class="block text-center w-full py-1 lg:hidden text-lg font-rock-salt text-slate-300 bg-slate-500"><%= @page_heading %></div>
+<div id="header-center-small" class="block text-center w-full py-1 lg:hidden text-lg font-rock-salt text-slate-300 bg-slate-500"><%= @page_heading %></div>
