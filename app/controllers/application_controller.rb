@@ -1,7 +1,7 @@
 # ApplicationController
 class ApplicationController < ActionController::Base
   before_action :set_page_title
-  before_action :require_login
+  # before_action :require_login # Add this to pages that require authentication to access
 
   private
 

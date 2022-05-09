@@ -1,7 +1,5 @@
 # StaticPagesController
 class StaticPagesController < ApplicationController
-  before_action :require_login, only: [:members]
-
   def about
     @page_heading = "Welcome"
   end

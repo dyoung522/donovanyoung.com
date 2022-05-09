@@ -1,6 +1,4 @@
 class UserSessionsController < ApplicationController
-  skip_before_action :require_login, only: %i[new create]
-
   def new
     @page_title = "Donovan: Login"
     @page_heading = "Please Login"
@@ -12,8 +10,7 @@ class UserSessionsController < ApplicationController
     if @user
       redirect_back_or_to(root_path, notice: "You have successfully logged in as #{current_user.email}")
     else
-      flash.now[:alert] = "Authentication Failed"
-      render action: "new", status: :unprocessable_entity
+      redirect_to(login_path, status: :unprocessable_entity, alert: "Authentication Failed")
     end
   end
 
