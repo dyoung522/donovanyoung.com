@@ -4,14 +4,12 @@
 </div>
 
 <%# Display hamburger menu on xs screens %>
-<div data-controller="menu" class="inline-block sm:hidden">
-  <div data-action="click->menu#toggle">
-    <button type="button" id="options-menu" aria-haspopup="true" aria-expanded="true">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </div>
+<div data-controller="view" class="inline-block sm:hidden">
+  <button type="button" data-action="view#toggle" id="options-menu" aria-haspopup="true" aria-expanded="true">
+    <i class="fa-solid fa-bars"></i>
+  </button>
 
-  <div data-menu-target="toggleable" class="hidden absolute right-1 w-48 mt-2 bg-slate-500 shadow origin-top-right rounded-md ring-1 ring-black ring-opacity-5">
+  <div data-view-target="toggleable" class="hidden absolute right-1 w-48 mt-2 bg-slate-500 shadow origin-top-right rounded-md ring-1 ring-black ring-opacity-5">
     <div class="grid grid-cols-1 divide-y divide-slate-600 text-blue-400 text-center font-rock-salt" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
       <%= render "elements/nav_menu" %>
     </div>

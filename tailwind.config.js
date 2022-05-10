@@ -17,6 +17,10 @@ module.exports = {
         "circuit-board-light": "url('bg-circuit-board-light.svg')",
         "circuit-board-dark": "url('bg-circuit-board-dark.svg')",
       },
+      transitionProperty: {
+        "height": "height",
+        "max-height": "max-height"
+      },
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
@@ -32,6 +36,6 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/typography'),
+    require("@tailwindcss/typography"),
   ],
 }
