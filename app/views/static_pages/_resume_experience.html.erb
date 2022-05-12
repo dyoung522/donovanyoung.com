@@ -29,7 +29,7 @@
   <% end %>
 
   <% if yield.presence %>
-    <% if local_variables.include?(:show) %>
+    <% if local_variables.include?(:always_show) && always_show == true %>
       <%= yield %>
     <% else %>
       <div data-controller="height" class="">
