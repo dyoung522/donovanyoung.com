@@ -7,12 +7,8 @@
     </div>
     <div class="hidden sm:grid justify-self-end">
       <div class=""><%= link_to "https://www.donovanyoung.com/resume" %></div>
-      <div class="pt-2 flex flex-row content-center justify-end text-xl">
-        <a class="px-2" href="mailto:me@donovanyoung.com?subject=Resume"><i class="fa-solid fa-paper-plane"></i></a>
-        <a class="px-2" href="https://www.github.com/dyoung522"><i class="fa-brands fa-github"></i></a>
-        <a class="px-2" href="https://stackoverflow.com/users/1794315/donovan"><i class="fa-brands fa-stack-overflow"></i></a>
-        <a class="px-2" href="https://www.linkedin.com/in/dyoung522/"><i class="fa-brands fa-linkedin"></i></a>
-        <a class="px-2" href="https://twitter.com/dyoung522"><i class="fa-brands fa-twitter"></i></a>
+      <div class="pt-2 flex justify-end text-xl not-prose">
+        <%= render "elements/social_links" %>
       </div>
     </div>
   </section>
