@@ -1,0 +1,32 @@
+name: Deploy to Staging
+
+concurrency:
+  group: staging
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  lint:
+    uses: ./.github/workflows/lint.yml
+
+  test:
+    uses: ./.github/workflows/test.yml
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs:
+      - test
+      - lint
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Deploy to Heroku Staging
+        uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "staging-donovanyoung-com"
+          heroku_email: "dyoung522@gmail.com"

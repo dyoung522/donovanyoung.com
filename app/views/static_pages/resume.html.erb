@@ -7,12 +7,8 @@
     </div>
     <div class="hidden sm:grid justify-self-end">
       <div class=""><%= link_to "https://www.donovanyoung.com/resume" %></div>
-      <div class="pt-2 flex flex-row content-center justify-end text-xl">
-        <a class="px-2" href="mailto:me@donovanyoung.com?subject=Resume"><i class="fa-solid fa-paper-plane"></i></a>
-        <a class="px-2" href="https://www.github.com/dyoung522"><i class="fa-brands fa-github"></i></a>
-        <a class="px-2" href="https://stackoverflow.com/users/1794315/donovan"><i class="fa-brands fa-stack-overflow"></i></a>
-        <a class="px-2" href="https://www.linkedin.com/in/dyoung522/"><i class="fa-brands fa-linkedin"></i></a>
-        <a class="px-2" href="https://twitter.com/dyoung522"><i class="fa-brands fa-twitter"></i></a>
+      <div class="pt-2 flex justify-end text-xl not-prose">
+        <%= render "elements/social_links" %>
       </div>
     </div>
   </section>
@@ -34,23 +30,11 @@
         end_date: "Current",
         title: "Senior Software Engineer",
         company: "SharpSpring / ConstantContact",
-        show: true,
-        tags: %w[Ruby Ruby-on-Rails javascript ReactJS Java Docker Heroku AWS AWS-S3],
+        always_show: true,
+        tags: %w[Ruby Ruby-on-Rails jquery javascript ReactJS Java Docker Heroku GCP GoogleAds AWS AWS-S3],
       ) do %>
-        <p>Frontend &amp; Backend development for PerfectAudience / SharpSpring Ads applications.  Utilizing
-          <ul>
-            <li>Ruby/Rails API/UI</li>
-            <li>JavaScript UI/UX</li>
-            <li>Java/Spring API</li>
-          </ul>
-        </p>
         <p class="italic">Note: SharpSpring was aquired by ConstantContact in Jan of 2022</p>
-        <p>Continuing to develop the SharpSpring Ads platform; but am also now working on the ConstantContact CPE application suite, which utilizes
-          <ul>
-            <li>Ruby/Rails</li>
-            <li>ReactJS</li>
-          </ul>
-        </p>
+        <p>Fullstack development on PerfectAudience, SharpSpring Ads, applications and, more recently, the ConstantContact CPE application suite.</p>
       <% end %>
 
       <hr class="my-4" />
@@ -60,12 +44,12 @@
         end_date: "Oct 2019",
         title: "Principal Software Engineer",
         company: "Oracle, Inc.",
-        show: true,
+        always_show: true,
         tags: %w[Ruby Ruby-on-Rails Sinatra javascript ReactJS Docker Java Apache-kafka micro-services]
       ) do %>
-        <p>Development of customer-facing web technologies utilizing Ruby/Rails/Sinatra/Node/Java along with a ReactJS UI.
-        Additionally, I created a suite of back-end micro-services leveraging Kafka.</p>
-        <p class="italic">Oracle closed it's Atlanta development office in October of 2019, laying off all Atlanta based employees.</p>
+        <p>Development of customer-facing web technologies utilizing Ruby/Rails/Sinatra/Node/Java along with a ReactJS UI.</p>
+        <p>Additionally, I built a suite of back-end micro-services leveraging Apache's Kafka messenging bus which handled customer notifications (SMTP, SMS, App pop).</p>
+        <p class="italic">Oracle closed the Atlanta development OU in October of 2019, laying off all employees.</p>
       <% end %>
 
       <hr class="my-4" />
@@ -75,7 +59,7 @@
         end_date: "Jan 2019",
         title: "Actor / Improv Performer",
         company: "Whole World Improv Theater",
-        show: true,
+        always_show: true,
         tags: %w[acting improv comedy public-speaking team-building Ruby Ruby-on-Rails]
       ) do %>
         <p>Founded in 1993, The <%= link_to("Whole World Improv Theater", "http://www.wholeworldtheatre.com") %> (WWIT) is best known for creating a unique and hilarious improv
@@ -205,7 +189,7 @@
         start_date: "Dec 1993",
         end_date: "Sep 1998",
         title: "Staff Manager",
-        company: "BellSoutch Telecommunications (AT&T)",
+        company: "BellSouth Telecommunications (now AT&T)",
         tags: %w[HP-UX Linux C C++ perl HTML]
       ) do %>
         <p>Lead a team responsible for the installation and conversion of several major software applications. These included Unix on

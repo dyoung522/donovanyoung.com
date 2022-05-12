@@ -1,0 +1,20 @@
+name: Lint and Test
+
+concurrency:
+  group: ci-tests-${{ github.ref }}-1
+  cancel-in-progress: true
+
+on:
+  pull_request:
+    branches-ignore:
+      - develop
+      - main
+
+jobs:
+  lint:
+    if: github.event.pull_request.draft == false
+    uses: ./.github/workflows/lint.yml
+
+  test:
+    if: github.event.pull_request.draft == false
+    uses: ./.github/workflows/test.yml

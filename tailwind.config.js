@@ -21,13 +21,14 @@ module.exports = {
         "height": "height",
         "max-height": "max-height"
       },
-      typography: ({ theme }) => ({
+      typography: (theme) => ({
         DEFAULT: {
           css: {
             a: {
               textDecoration: "none",
+              color: theme("colors.blue.500"),
               "&:hover": {
-                color: theme("color.slate.600")
+                color: theme("colors.blue.600")
               },
             },
           },
