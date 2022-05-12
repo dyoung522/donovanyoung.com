@@ -38,8 +38,21 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
-
+  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.perform_caching = false
+  config.action_mailer.default_options = { from: "me@donovanyoung.com" }
+  config.action_mailer.smtp_settings = {
+    address:              Rails.application.credentials.smtp.address,
+    port:                 Rails.application.credentials.smtp.port,
+    domain:               Rails.application.credentials.smtp.domain,
+    user_name:            Rails.application.credentials.smtp.user,
+    password:             Rails.application.credentials.smtp.password,
+    authentication:       'plain',
+    enable_starttls_auto: true,
+    open_timeout:         5,
+    read_timeout:         5
+  }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

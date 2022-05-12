@@ -1,0 +1,5 @@
+<% flash.each do |flash_type, message| %>
+  <aside>
+    <%= render "elements/#{flash_type}", message: message %>
+  </aside>
+<% end %>

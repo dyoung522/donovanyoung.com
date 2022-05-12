@@ -1,0 +1,23 @@
+<div id="login-page", class="space-y-6 sm:space-y-5 mt-20">
+  <%= form_with(model: @user, url: login_path, method: :post) do |form| %>
+    <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:pt-5">
+      <%= form.label :email, class: "block sm:text-right text-sm font-bold sm:mt-px sm:pt-2" %>
+      <div class="mt-1 sm:mt-0 sm:col-span-2">
+        <%= form.text_field :email, class: "max-w-lg p-2 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md text-slate-800" %>
+      </div>
+    </div>
+
+    <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:pt-5">
+      <%= form.label :password, class: "block sm:text-right text-sm font-bold sm:mt-px sm:pt-2" %>
+      <div class="mt-1 sm:mt-0 sm:col-span-2">
+        <%= form.password_field :password, class: "max-w-lg p-2 block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md text-slate-800" %>
+      </div>
+    </div>
+
+    <div class="sm:grid sm:grid-cols-2 sm:gap-4 sm:items-start sm:justify-items-center sm:pt-5">
+      <div class="mt-1 py-1 px-2 w-24 ring-2 ring-blue-300 bg-blue-600 rounded sm:mt-0 sm:col-span-2 sm:text-center">
+        <%= form.submit "Login", id: "sign-in-button" %>
+      </div>
+    </div>
+  <% end %>
+</div>

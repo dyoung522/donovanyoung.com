@@ -7,5 +7,8 @@ import { application } from "./application"
 import FooterInfoController from "./footer_info_controller.jsx"
 application.register("footer-info", FooterInfoController)
 
-import MenuController from "./menu_controller.js"
-application.register("menu", MenuController)
+import HeightController from "./height_controller.js"
+application.register("height", HeightController)
+
+import ViewController from "./view_controller.js"
+application.register("view", ViewController)

@@ -1,0 +1,46 @@
+<section class="">
+  <div class="sm:text-lg font-bold text-blue-500 block sm:flex sm:flex-row sm:gap-2 justify-start italic font-serif pb-2">
+
+    <% if local_variables.include?(:start_date) %>
+      <div>
+        <%= start_date %>&nbsp;
+
+        <% if local_variables.include?(:end_date) %>
+          <i class="fa-solid fa-arrow-right text-sm"></i>
+          &nbsp;
+          <%= end_date %>
+        <% end %>
+      </div>
+    <% end %>
+
+    <% if local_variables.include?(:title) %>
+      <div class="hidden sm:flex">&mdash;</div>
+      <div class=""><%= title %></div>
+    <% end %>
+
+    <% if local_variables.include?(:company) %>
+      <div class="hidden sm:flex">&mdash;</div>
+      <div class=""><%= company %></div>
+    <% end %>
+  </div>
+
+  <% if local_variables.include?(:tags) %>
+    <%= render "elements/tags", tags: tags %>
+  <% end %>
+
+  <% if yield.presence %>
+    <% if local_variables.include?(:show) %>
+      <%= yield %>
+    <% else %>
+      <div data-controller="height" class="">
+        <button type="button" data-action="height#toggle" aria-haspopup="true" aria-expanded="true" class="pt-5 text-blue-500 font-bold">
+          Click to view details
+        </button>
+
+        <div data-height-target="toggleable" class="transition-max-height duration-300 ease-in-out overflow-hidden max-h-0">
+          <%= yield %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</section>
