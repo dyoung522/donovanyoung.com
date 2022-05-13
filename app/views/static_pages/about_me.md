@@ -15,7 +15,7 @@ However, all that said, I imagine you might be here for
 
 - my *[CV/resume](/resume)*
 - one of my *[blog posts](/blogs)*
-- or maybe one of my *[project pages](/projects)*.
+- or maybe one of my *[project pages](/projects)*
 
 Either way, I'm happy you're here.
 
