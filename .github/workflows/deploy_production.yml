@@ -10,6 +10,8 @@ on:
       - main
 
 jobs:
+  test:
+    uses: ./.github/workflows/test.yml
   deploy:
     runs-on: ubuntu-latest
     steps:

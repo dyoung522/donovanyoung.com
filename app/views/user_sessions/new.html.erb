@@ -1,4 +1,4 @@
-<div id="login-page", class="space-y-6 sm:space-y-5 mt-20">
+<div id="login-page" class="space-y-6 sm:space-y-5 mt-20">
   <%= form_with(model: @user, url: login_path, method: :post) do |form| %>
     <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:pt-5">
       <%= form.label :email, class: "block sm:text-right text-sm font-bold sm:mt-px sm:pt-2" %>

@@ -25,11 +25,12 @@ gem "stimulus-rails"
 gem "turbo-rails"
 
 group :development, :test do
+  # gem "better_html", "~> 1.0"
   gem "brakeman", "~> 5.2"
   gem "bundler-audit", "~> 0.9.0"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri mingw x64_mingw]
-  gem "erb_lint", "~> 0.1.3"
+  gem "erb_lint", "~> 0.1.3", require: false
   gem "factory_bot", "~> 6.2"
   gem "factory_bot_rails", "~> 6.2"
   gem "faker", "~> 2.20"
