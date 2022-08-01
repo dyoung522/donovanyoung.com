@@ -29,9 +29,13 @@ group :development, :test do
   gem "bundler-audit", "~> 0.9.0"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri mingw x64_mingw]
+  gem "erb_lint", "~> 0.1.3"
   gem "factory_bot", "~> 6.2"
   gem "factory_bot_rails", "~> 6.2"
   gem "faker", "~> 2.20"
+  gem "guard", "~> 2.18"
+  gem "guard-rails", "~> 0.8.1"
+  gem "guard-rspec", "~> 4.7"
   gem "letter_opener", "~> 1.8"
   gem "pry-rails", "~> 0.3.9"
   gem "rspec-rails", "~> 5.1"
