@@ -13,6 +13,7 @@ gem "puma", "~> 5.0"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 # supporting Gems
+gem "better_html"
 gem "cssbundling-rails"
 gem "jbuilder"
 gem "jsbundling-rails"
@@ -25,7 +26,6 @@ gem "stimulus-rails"
 gem "turbo-rails"
 
 group :development, :test do
-  # gem "better_html", "~> 1.0"
   gem "brakeman", "~> 5.2"
   gem "bundler-audit", "~> 0.9.0"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
