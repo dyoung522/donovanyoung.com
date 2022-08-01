@@ -26,8 +26,21 @@
     <div class="mb-4 text-lg sm:text-xl sm:text-blue-500 italic">Experience</div>
     <div class="sm:col-span-2">
       <%= render("resume_experience",
-        start_date: "Mar 2020",
+        start_date: "July 2022",
         end_date: "Current",
+        title: "Senior Software Engineer",
+        company: "LinkSquares",
+        always_show: true,
+        tags: %w[Ruby Ruby-on-Rails javascript ReactJS Docker Heroku AWS AWS-S3],
+      ) do %>
+        <p>Fullstack developer working on Rails/ReactJS.</p>
+      <% end %>
+
+      <hr class="my-4" />
+
+      <%= render("resume_experience",
+        start_date: "Mar 2020",
+        end_date: "July 2022",
         title: "Senior Software Engineer",
         company: "SharpSpring / ConstantContact",
         always_show: true,
