@@ -30,4 +30,6 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  access_restricted: "Access Restricted"
+  auth_failed: "Authentication Failed"
+  logged_out: "You've been logged out"

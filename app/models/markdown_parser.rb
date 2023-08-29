@@ -16,7 +16,7 @@ class MarkdownParser
   end
 
   def to_html
-    processor.render(@markdown).html_safe
+    processor.render(@markdown).html_safe # rubocop:disable Rails/OutputSafety
   end
 
   def processor

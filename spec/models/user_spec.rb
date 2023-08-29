@@ -1,7 +1,7 @@
 require "rails_helper"
 
-RSpec.describe User, type: :model do
-  let(:user) { build :user }
+RSpec.describe User do
+  let(:user) { build(:user) }
 
   describe "Validations" do
     it "validates email for uniqueness" do
