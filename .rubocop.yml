@@ -1,6 +1,11 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
 AllCops:
   TargetRubyVersion: 3.1.2
   NewCops: enable
+  SuggestExtensions: false
   Exclude:
     - db/**/*
     - config/**/*

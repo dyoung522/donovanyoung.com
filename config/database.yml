@@ -5,13 +5,13 @@ default: &default
 
 development:
   <<: *default
-  url: <%= ENV["DEV_DATABASE_URL"] %>
+  url: <%= ENV.fetch("DEV_DATABASE_URL", nil) %>
 
 production:
   <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
+  url: <%= ENV.fetch("DATABASE_URL", nil) %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 15 } %>
 
 test:
   <<: *default
-  url: <%= ENV["TEST_DATABASE_URL"] %>
+  url: <%= ENV.fetch("TEST_DATABASE_URL", nil) %>

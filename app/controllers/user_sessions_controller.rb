@@ -10,12 +10,12 @@ class UserSessionsController < ApplicationController
     if @user
       redirect_back_or_to(root_path, notice: "You have successfully logged in as #{current_user.email}")
     else
-      redirect_to(login_path, status: :unprocessable_entity, alert: "Authentication Failed")
+      redirect_to(login_path, status: :unprocessable_entity, alert: t(:auth_failed))
     end
   end
 
   def destroy
     logout
-    redirect_to(root_path, status: :see_other, notice: "You have been logged out")
+    redirect_to(root_path, status: :see_other, notice: t(:logged_out))
   end
 end

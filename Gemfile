@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.2"
+ruby "3.2.2"
 
 gem "rails", "~> 7.0", ">= 7.0.2"
 
@@ -13,6 +13,7 @@ gem "puma", "~> 5.0"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 # supporting Gems
+gem "better_html"
 gem "cssbundling-rails"
 gem "jbuilder"
 gem "jsbundling-rails"
@@ -29,7 +30,9 @@ group :development, :test do
   gem "bundler-audit", "~> 0.9.0"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri mingw x64_mingw]
-  gem "erb_lint", "~> 0.1.3"
+  gem "dotenv", "~> 2.8"
+  gem "dotenv-rails", "~> 2.8"
+  gem "erb_lint", "~> 0.1.3", require: false
   gem "factory_bot", "~> 6.2"
   gem "factory_bot_rails", "~> 6.2"
   gem "faker", "~> 2.20"

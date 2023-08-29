@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   private
 
   def not_authenticated
-    redirect_to login_path, alert: "Access Restricted"
+    redirect_to login_path, alert: t(:access_restricted)
   end
 
   def set_page_title
