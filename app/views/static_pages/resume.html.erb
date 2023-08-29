@@ -1,5 +1,5 @@
 <div class="container paper">
-  <section class="pb-4 border-b-2 border-slate-700 block sm:grid sm:grid-cols-2 justify-between content-start items-start">
+  <section class="items-start content-start justify-between block pb-4 border-b-2 border-slate-700 sm:grid sm:grid-cols-2">
     <div>
       <div class="sm:text-xl">Donovan C. Young</div>
       <div class="italic">Senior, Full-Stack Software Engineer</div>
@@ -7,14 +7,14 @@
     </div>
     <div class="hidden sm:grid justify-self-end">
       <div class=""><%= link_to "https://www.donovanyoung.com/resume" %></div>
-      <div class="pt-2 flex justify-end text-xl not-prose">
+      <div class="flex justify-end pt-2 text-xl not-prose">
         <%= render "elements/social_links" %>
       </div>
     </div>
   </section>
 
-  <section class="hidden sm:grid sm:grid-cols-4 sm:gap-2 border-b-2 border-slate-700 py-4">
-    <div class="mb-5 text-lg sm:text-xl sm:text-blue-500 italic">Technical Skills/Tags</div>
+  <section class="hidden py-4 border-b-2 sm:grid sm:grid-cols-4 sm:gap-2 border-slate-700">
+    <div class="mb-5 text-lg italic sm:text-xl sm:text-blue-500">Technical Skills/Tags</div>
     <div class="sm:col-span-3">
       <div class="">
         <%= render "elements/tags", tags: @tags %>
@@ -22,17 +22,19 @@
     </div>
   </section>
 
-  <section class="sm:grid sm:grid-cols-3 sm:gap-2 border-b-2 border-slate-700 py-4">
-    <div class="mb-4 text-lg sm:text-xl sm:text-blue-500 italic">Experience</div>
+  <section class="py-4 border-b-2 sm:grid sm:grid-cols-3 sm:gap-2 border-slate-700">
+    <div class="mb-4 text-lg italic sm:text-xl sm:text-blue-500">Experience</div>
     <div class="sm:col-span-2">
       <%= render("resume_experience",
                  start_date: "July 2022",
-                 end_date: "Current",
+                 end_date: "August 2023",
                  title: "Senior Software Engineer",
                  company: "LinkSquares",
                  always_show: true,
-                 tags: %w[Ruby Ruby-on-Rails javascript ReactJS Docker Heroku AWS AWS-S3]) do %>
-        <p>Fullstack developer working on Rails/ReactJS.</p>
+                 tags: %w[Ruby Ruby-on-Rails JavaScript ReactJS Docker Heroku AWS AWS-S3 AWS-Lambda]) do %>
+        <p>LinkSquares is a contract lifecycle management (CLM) platform that helps legal and finance teams work smarter.</p>
+        <p>Fullstack developer working with Ruby, Rails, ReactJS, and AWS Lambda.</p>
+        <p>I worked on several projects involved in leveraging internal and external A.I. to read and parse digital documents via AWS Lambda pipelines as well as providing a UI application to correct inconsistencies.</p>
       <% end %>
 
       <hr class="my-4">
@@ -43,7 +45,7 @@
                  title: "Senior Software Engineer",
                  company: "SharpSpring / ConstantContact",
                  always_show: true,
-                 tags: %w[Ruby Ruby-on-Rails jquery javascript ReactJS Java Docker Heroku GCP GoogleAds AWS AWS-S3]) do %>
+                 tags: %w[Ruby Ruby-on-Rails jquery JavaScript ReactJS Java Docker Heroku GCP GoogleAds AWS AWS-S3]) do %>
         <p class="italic">Note: SharpSpring was aquired by ConstantContact in Jan of 2022</p>
         <p>Fullstack development on PerfectAudience, SharpSpring Ads, applications and, more recently, the ConstantContact CPE application suite.</p>
       <% end %>
@@ -56,7 +58,7 @@
                  title: "Principal Software Engineer",
                  company: "Oracle, Inc.",
                  always_show: true,
-                 tags: %w[Ruby Ruby-on-Rails Sinatra javascript ReactJS Docker Java Apache-kafka micro-services]) do %>
+                 tags: %w[Ruby Ruby-on-Rails Sinatra JavaScript ReactJS Docker Java Apache-kafka micro-services]) do %>
         <p>Development of customer-facing web technologies utilizing Ruby/Rails/Sinatra/Node/Java along with a ReactJS UI.</p>
         <p>Additionally, I built a suite of back-end micro-services leveraging Apache's Kafka messenging bus which handled customer notifications (SMTP, SMS, App pop).</p>
         <p class="italic">Oracle closed the Atlanta development OU in October of 2019, laying off all employees.</p>
@@ -209,8 +211,8 @@
     </div>
   </section>
 
-  <section class="sm:grid sm:grid-cols-3 sm:gap-2 border-b-2 border-slate-700 py-4">
-    <div class="mb-4 text-lg sm:text-xl sm:text-blue-500 italic">Education &amp; Hobbies</div>
+  <section class="py-4 border-b-2 sm:grid sm:grid-cols-3 sm:gap-2 border-slate-700">
+    <div class="mb-4 text-lg italic sm:text-xl sm:text-blue-500">Education &amp; Hobbies</div>
     <div class="sm:col-span-2">
       <%= render("resume_experience",
                  start_date: "1984",
