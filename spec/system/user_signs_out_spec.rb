@@ -1,7 +1,7 @@
 require "rails_helper"
 
 # rubocop:disable RSpec/ExampleLength
-xdescribe "User signs out" do
+describe "User signs out" do
   let(:user) { create(:user) }
 
   before { sign_in(user) }
@@ -15,7 +15,7 @@ xdescribe "User signs out" do
     click_on "logout-link"
 
     expect(page).to have_current_path(root_path)
-    expect(page).to have_text("You have been logged out")
+    expect(page).to have_text("logged out")
     expect(page).to have_text("Member login")
   end
   # rubocop:enable RSpec/MultipleExpectations

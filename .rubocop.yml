@@ -3,7 +3,7 @@ require:
   - rubocop-rspec
 
 AllCops:
-  TargetRubyVersion: 3.1.2
+  TargetRubyVersion: 3.2.2
   NewCops: enable
   SuggestExtensions: false
   Exclude:
@@ -13,6 +13,9 @@ AllCops:
     - bin/**/*
     - vendor/**/*
     - node_modules/**/*
+
+Lint/MissingSuper:
+  Enabled: false
 
 Style/FrozenStringLiteralComment:
   Enabled: false

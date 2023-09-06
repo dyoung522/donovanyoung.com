@@ -65,5 +65,4 @@ group :test do
   gem "fuubar"
   gem "selenium-webdriver"
   gem "shoulda-matchers"
-  gem "webdrivers"
 end
